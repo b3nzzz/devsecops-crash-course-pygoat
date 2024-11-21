@@ -4,7 +4,14 @@ WORKDIR /app
 
 
 # dependencies for psycopg2
+<<<<<<< HEAD
 RUN apt-get update && apt-get install --no-install-recommends -y dnsutils libpq-dev python3-dev \
+=======
+RUN apt-get update && apt-get install --no-install-recommends -y \
+    dnsutils \
+    libpq-dev \
+    python3-dev \
+>>>>>>> 28bc48b (Fix Dockerfile: Remove version constraints for dependencies)
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
